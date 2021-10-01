@@ -1,0 +1,1 @@
+location.href = './pages/LoginPage/LoginPage.html'
