@@ -1,0 +1,59 @@
+@import url('../../index.css');
+
+.container {
+  width: 1300px;
+  height: 650px;
+  background-color: #d4a003;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 0 0 10px 1px #2c2c2c9f;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  color: #EB1300;
+  font-size: 50px;
+}
+
+.image {
+  width: 55%;
+  height: 100%;
+  border-radius: 50px;
+}
+
+.login-page-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: 150px;
+}
+
+.input-login, .input-password, .sign-in-btn, .signup-btn {
+  outline: none;
+  border-style: none;
+  border-radius: 50px;
+  width: 350px;
+  height: 50px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.sign-in-btn:hover {
+  background-color: #A0C8F0;
+}
+
+.input-login, .input-password {
+  padding: 15px;
+}
+
+.signup-btn {
+  margin-top: 45px;
+  background-color: #A0C8F0;
+}
+
+.sign-in-btn, .signup-btn {
+  cursor: pointer;
+  color: #1A1A1A;
+}
