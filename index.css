@@ -12,3 +12,7 @@ body {
   align-items: center;
   background-image: url(./assets/textures/brushed-alum-dark-modificado.png);
 }
+
+.hide{
+  display: none;
+}

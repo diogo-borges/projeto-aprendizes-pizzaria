@@ -1,0 +1,67 @@
+@import url('../../index.css');
+
+.SingupPage-container{
+  width: 1300;
+  height: 650;
+  background-color: #A0C8F0;
+  border-radius: 50px;
+  padding: 10px;
+  box-shadow: 0 0 10px 1px #2c2c2c46;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logotipo{
+  width: 30%;
+}
+
+h1{
+  font-size: 30px;
+  text-align: center;
+  color: #C02A12;
+
+}
+.signup-input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-user,.input-password,.input-confirm-password,.signup-btn{
+  width: 350px;
+  height: 50px;
+  border-radius: 50px;
+  outline: none;
+  border-style: none;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.input-user,.input-password,.input-confirm-password{
+  padding: 15px;
+}
+
+.signup-btn,.cancel-hiperlink{
+  cursor: pointer;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+}
+
+.cancel-hiperlink{
+color: #dd7d0f;
+}
+
+.signup-btn:hover{
+  background-color: #dd7d0f;
+  color: white;
+}
+
+sub {
+  font-size: 14px;
+  align-self: center;
+  color: #ff0000;
+  margin: 0;
+}
