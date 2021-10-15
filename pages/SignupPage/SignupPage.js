@@ -1,16 +1,24 @@
+import User from "../../models/users.models.js"
+
 const formSignup = document.querySelector('form');
 formSignup.addEventListener('submit', signup)
 
-function signup(e) {
+function signup(event) {
   validUser();
   validPassword();
-  confirmPassword();
-  
-  e.preventDefault();
+  event.preventDefault();
+
+  if (validUser && validPassword === true) {
+    let newUser = new User(user.value, password.value);
+    alert(user.value)
+  }
 }
 
+const user = document.querySelector('.input-user');
+const password = document.querySelector('.input-password');
+const passwordConfirm = document.querySelector('.input-confirm-password');
+
 function validUser() {
-  const user = document.querySelector('.input-user');
   const regex = /^(?=.{6,20}$)[a-zA-Z0-9]+([-._]?[a-zA-Z0-9])+([-_])*$/;
   const userTest = regex.test(user.value.trim());
 
@@ -22,42 +30,35 @@ function validUser() {
   if (userTest) {
     user.nextElementSibling.innerHTML = ''
     user.nextElementSibling.classList.add('hide')
-
-    // let storageUsers = JSON.parse(localStorage.getItem('user'))
-    // if (!storageUsers) storageUsers = [];
-    // const user = {
-    //   description: user.value
-    // }
-    // storageUsers.push(user)
   }
 }
 
 function validPassword() {
-  const password = document.querySelector('.input-password');
   const regex = /^(?=.{6,}$)(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]/
   const passwordTest = regex.test(password.value)
+  const confirmTest = regex.test(passwordConfirm.value)
 
-  if (!passwordTest) {
+  if (!passwordTest || !confirmTest) {
     password.nextElementSibling.classList.remove('hide')
     password.nextElementSibling.innerHTML = 'Senha inválida'
+
+    passwordConfirm.nextElementSibling.classList.remove('hide')
+    passwordConfirm.nextElementSibling.innerHTML = 'Senha inválida'
   }
-  if (passwordTest) {
+  if (passwordTest && confirmTest) {
     password.nextElementSibling.innerHTML = ''
     password.nextElementSibling.classList.add('hide')
+
+    passwordConfirm.nextElementSibling.innerHTML = ''
+    passwordConfirm.nextElementSibling.classList.add('hide')
   }
-}
 
-function confirmPassword() {
-  const passwordConfirm = document.querySelector('.input-confirm-password');
-  const password = document.querySelector('.input-password');
-
-  if (passwordConfirm.value !== password.value) {
+  if (password.value !== passwordConfirm.value) {
     passwordConfirm.nextElementSibling.classList.remove('hide')
     passwordConfirm.nextElementSibling.innerHTML = 'Senhas não coicidem'
-  }
 
-  if (passwordConfirm.value === password.value) {
-    passwordConfirm.nextElementSibling.classList.add('hide')
-    passwordConfirm.nextElementSibling.innerHTML = ''
+    password.nextElementSibling.classList.remove('hide')
+    password.nextElementSibling.innerHTML = 'Senhas não coicidem'
   }
 }
+

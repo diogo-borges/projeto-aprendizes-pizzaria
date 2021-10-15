@@ -59,7 +59,7 @@ color: #dd7d0f;
   color: white;
 }
 
-sub {
+.error {
   font-size: 14px;
   align-self: center;
   color: #ff0000;
