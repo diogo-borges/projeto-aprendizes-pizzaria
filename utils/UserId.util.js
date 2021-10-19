@@ -1,6 +1,6 @@
-const iduser = function(){
+const idUser = function(){
     return Math.floor(Date.now(Math.random()*10000))
 }
 
-export default iduser; 
+export default idUser;
 

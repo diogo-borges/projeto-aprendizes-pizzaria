@@ -22,7 +22,7 @@ function validAndCreate(userValue, passwordValue, passwordToConfirm) {
   const regex = /^(?=.{6,20}$)[a-zA-Z0-9]+([-._]?[a-zA-Z0-9])+([-_])*$/;
   const userTest = regex.test(userValue);
 
-  const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/
+  const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]{6,}$/
   const passwordTest = regexp.test(passwordValue)
 
 const userValidations = [
