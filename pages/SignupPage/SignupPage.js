@@ -1,64 +1,50 @@
 import User from "../../models/users.models.js"
+import storageCreate from '../../helpers/storagehelper.js'
+import userValidation from "../../utils/UserValidation.util.js";
 
 const formSignup = document.querySelector('form');
-formSignup.addEventListener('submit', signup)
-
-function signup(event) {
-  validUser();
-  validPassword();
-  event.preventDefault();
-
-  if (validUser && validPassword === true) {
-    let newUser = new User(user.value, password.value);
-    alert(user.value)
-  }
-}
+formSignup.addEventListener('submit', signup);
 
 const user = document.querySelector('.input-user');
 const password = document.querySelector('.input-password');
 const passwordConfirm = document.querySelector('.input-confirm-password');
 
-function validUser() {
+function signup(event) {
+  validAndCreate(user.value.trim(), password.value, passwordConfirm.value);
+  event.preventDefault();
+}
+
+function validAndCreate(userValue, passwordValue, passwordToConfirm) {
+  const userError = document.querySelector('#user-error');
+  const passwordError = document.querySelector('#password-error');
+  const confirmPassword = document.querySelector('#confirm-password-error')
+
   const regex = /^(?=.{6,20}$)[a-zA-Z0-9]+([-._]?[a-zA-Z0-9])+([-_])*$/;
-  const userTest = regex.test(user.value.trim());
+  const userTest = regex.test(userValue);
 
-  if (!userTest) {
-    user.nextElementSibling.classList.remove('hide')
-    user.nextElementSibling.innerHTML = 'Usuário inválido'
-  }
+  const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/
+  const passwordTest = regexp.test(passwordValue)
 
-  if (userTest) {
-    user.nextElementSibling.innerHTML = ''
-    user.nextElementSibling.classList.add('hide')
+const userValidations = [
+  {
+    isValid: userTest, errorElement: userError
+  },
+
+  {
+    isValid: passwordTest, errorElement: passwordError
+  }, 
+
+  {
+    isValid: passwordValue === passwordToConfirm, errorElement: confirmPassword
   }
+]
+for (const validation of userValidations) {
+  userValidation(validation.isValid, validation.errorElement)
 }
 
-function validPassword() {
-  const regex = /^(?=.{6,}$)(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]/
-  const passwordTest = regex.test(password.value)
-  const confirmTest = regex.test(passwordConfirm.value)
-
-  if (!passwordTest || !confirmTest) {
-    password.nextElementSibling.classList.remove('hide')
-    password.nextElementSibling.innerHTML = 'Senha inválida'
-
-    passwordConfirm.nextElementSibling.classList.remove('hide')
-    passwordConfirm.nextElementSibling.innerHTML = 'Senha inválida'
-  }
-  if (passwordTest && confirmTest) {
-    password.nextElementSibling.innerHTML = ''
-    password.nextElementSibling.classList.add('hide')
-
-    passwordConfirm.nextElementSibling.innerHTML = ''
-    passwordConfirm.nextElementSibling.classList.add('hide')
-  }
-
-  if (password.value !== passwordConfirm.value) {
-    passwordConfirm.nextElementSibling.classList.remove('hide')
-    passwordConfirm.nextElementSibling.innerHTML = 'Senhas não coicidem'
-
-    password.nextElementSibling.classList.remove('hide')
-    password.nextElementSibling.innerHTML = 'Senhas não coicidem'
+const allValid = userValidations.every(validation => validation.isValid)
+  if (allValid) {
+    let newUser = new User(userValue, passwordValue);
+    storageCreate(newUser);
   }
 }
-
