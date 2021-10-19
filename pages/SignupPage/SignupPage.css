@@ -1,5 +1,4 @@
 @import url('../../index.css');
-
 .SingupPage-container {
   width: 1300;
   height: 650;
@@ -12,24 +11,20 @@
   justify-content: center;
   flex-direction: column;
 }
-
 .logotipo {
   width: 35%;
   display: flex;
 }
-
 h1 {
   font-size: 35px;
   text-align: center;
   color: #C02A12;
 }
-
 .signup-inputs {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-
 .input-user, .input-password, .input-confirm-password, .signup-btn {
   width: 350px;
   height: 50px;
@@ -39,7 +34,6 @@ h1 {
   font-family: 'Roboto Mono', monospace;
   padding: 15px;
 }
-
 .signup-btn, .cancel-hiperlink {
   cursor: pointer;
   text-align: center;
@@ -48,33 +42,28 @@ h1 {
   text-decoration: none;
   width: 390px;
 }
-
 .cancel-hiperlink {
-  color: #dd7d0f;
+  color: #DD7D0F;
   margin-top: 35px;
 }
-
 .signup-btn {
   font-size: 15px;
 }
-
 .signup-btn:hover {
-  background-color: #dd7d0f;
+  background-color: #DD7D0F;
   color: white;
   font-size: 15px;
 }
-
 .tooltip-user, .tooltip-password, .tooltip-password-confirm {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
 }
-
 [data-tooltip] {
   position: relative;
   cursor: pointer;
-  background-color: #dd7d0f;
+  background-color: #DD7D0F;
   border-radius: 100px;
   padding: 5px;
   width: 25px;
@@ -85,7 +74,6 @@ h1 {
   font-weight: bold;
   margin-left: 15px;
 }
-
 [data-tooltip]::after {
   position: absolute;
   width: 140px;
@@ -94,7 +82,7 @@ h1 {
   text-align: center;
   box-sizing: border-box;
   content: attr(data-tooltip);
-  color: #dd7d0f;
+  color: #DD7D0F;
   background-color: rgba(255, 255, 255, 0.658);
   padding: 8px;
   border-radius: 10px;
@@ -103,21 +91,25 @@ h1 {
   transform: translateY(10px);
   transition: opacity 0.3s, transform 0.2s;
 }
-
 [data-tooltip]:hover::after {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
-
 .input-tooltips {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-
 .signup-btn-and-hiperlink {
   display: flex;
   flex-direction: column;
+}
+
+.error {
+  font-size: 14px;
+  align-self: center;
+  color: #FF0000;
+  margin: 0;
 }
