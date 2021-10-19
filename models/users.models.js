@@ -1,5 +1,4 @@
-import iduser from "../utils/UserId.util.js" ;
-
+import iduser from "../utils/UserId.util";
 class User {
   constructor(nickname, password) {
     this.id = iduser().toString();

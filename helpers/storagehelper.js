@@ -1,4 +1,3 @@
-
 function storageCreate(user) {
   let storageUsers = JSON.parse(localStorage.getItem('users'))
   if (!storageUsers) storageUsers = [];

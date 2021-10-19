@@ -1,20 +1,34 @@
 <link rel="stylesheet" href="SignupPage.css">
-<script type='module' src="SignupPage.js"></script>
+<script type="module" src="SignupPage.js"></script>
 <title>Algoritmo cadastro</title>
 
 <div class="main">
-	<section class="SingupPage-container">
-		<img class="logotipo" src="../../assets/img/algoritmo horizontal.png">
-		<form class="signup-input">
-			<h1>.Cadastro</h1>
-			<input class='input-user' type="text" placeholder="Defina seu nome de usuário">
-			<sub class="error hide"></sub>
-			<input class='input-password' type="password" placeholder="Defina sua senha">
-			<sub class="error hide"></sub>
-			<input class='input-confirm-password' type="password" placeholder="Confirme sua senha">
-			<sub class="error hide"></sub>
-			<button type="submit" class='signup-btn'>Cadastrar</button>
-			<a class="cancel-hiperlink" href="../LoginPage/LoginPage.html">Cancelar</a>
-		</form>
-	</section>
+  <section class="SingupPage-container">
+    <img class="logotipo" src="../../assets/img/algoritmo horizontal.png">
+    <form class="signup-inputs">
+      <h1>.Cadastro</h1>
+      <div class="input-tooltips">
+        <button class="tooltip-user" data-tooltip="O usuário pode ser composto de letras, 
+        maiúsculas e/ou minúsculas, números e símbolos como traço (-), underscore (_) e ponto (.)">&#63</button>
+        <input class='input-user' type="text" placeholder="Defina seu nome de usuário">
+      </div>
+      <sub id="user-error" class="error hide"></sub>
+      <div class="input-tooltips">
+        <button class="tooltip-password"
+          data-tooltip="A senha deve conter pelo menos 6 
+        dígitos, incluindo um número, uma letra maiúscula e minúscula e um caractere especial (@$!%*#?&+)">&#63</button>
+        <input class='input-password' type="password" placeholder="Defina sua senha">
+      </div>
+      <sub id="password-error" class="error hide"></sub>
+      <div class="input-tooltips">
+        <button class="tooltip-password-confirm" data-tooltip="Deve ser idêntica à senha definida acima">&#63</button>
+        <input class='input-confirm-password' type="password" placeholder="Confirme sua senha">
+      </div>
+      <sub id="confirm-password-error" class="error hide"></sub>
+      <div class="signup-btn-and-hiperlink">
+        <button type="submit" class='signup-btn'>Cadastrar</button>
+        <a class="cancel-hiperlink" href="../LoginPage/LoginPage.html">Cancelar</a>
+      </div>
+    </form>
+  </section>
 </div>
