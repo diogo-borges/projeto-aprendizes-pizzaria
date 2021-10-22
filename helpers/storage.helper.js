@@ -1,3 +1,5 @@
+import User from "../models/users.models.js";
+
 function storageCreate(user) {
   let storageUsers = JSON.parse(localStorage.getItem('users'))
   if (!storageUsers) storageUsers = [];
@@ -6,3 +8,6 @@ function storageCreate(user) {
 }
 
 export default storageCreate;
+
+
+

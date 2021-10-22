@@ -1,6 +1,9 @@
 import User from "../../models/users.models.js"
-import storageCreate from '../../helpers/storagehelper.js'
+import storageCreate from '../../helpers/storage.helper.js'
 import userValidation from "../../utils/UserValidation.util.js";
+
+const container = document.querySelector('.signup-inputs')
+container.classList.remove('hidden')
 
 const formSignup = document.querySelector('form');
 formSignup.addEventListener('submit', signup);
@@ -25,26 +28,39 @@ function validAndCreate(userValue, passwordValue, passwordToConfirm) {
   const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]{6,}$/
   const passwordTest = regexp.test(passwordValue)
 
-const userValidations = [
-  {
-    isValid: userTest, errorElement: userError
-  },
+  const userValidations = [
+    {
+      isValid: userTest, errorElement: userError
+    },
 
-  {
-    isValid: passwordTest, errorElement: passwordError
-  }, 
+    {
+      isValid: passwordTest, errorElement: passwordError
+    },
 
-  {
-    isValid: passwordValue === passwordToConfirm, errorElement: confirmPassword
+    {
+      isValid: passwordValue === passwordToConfirm, errorElement: confirmPassword
+    }
+  ]
+  for (const validation of userValidations) {
+    userValidation(validation.isValid, validation.errorElement)
   }
-]
-for (const validation of userValidations) {
-  userValidation(validation.isValid, validation.errorElement)
-}
 
-const allValid = userValidations.every(validation => validation.isValid)
+  const allValid = userValidations.every(validation => validation.isValid)
   if (allValid) {
     let newUser = new User(userValue, passwordValue);
     storageCreate(newUser);
+    const successfulSignUp = document.querySelector('#successful-signUp')
+    const container = document.querySelector('.signup-inputs')
+    const loaderCatch = document.querySelector('.loader')
+    successfulSignUp.classList.remove('hidden')
+    let hideContainer = setTimeout(function () {
+      container.classList.add('hidden')
+    }, 2000)
+    let showLoader = setTimeout(function () {
+      loaderCatch.classList.remove('hidden')
+    }, 2000)
+    let redirect = setTimeout(function () {
+      location.href = "../LoginPage/LoginPage.html"
+    }, 5000)
   }
 }
