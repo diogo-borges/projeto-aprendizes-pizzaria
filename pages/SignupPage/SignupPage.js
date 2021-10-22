@@ -48,19 +48,6 @@ function validAndCreate(userValue, passwordValue, passwordToConfirm) {
   const allValid = userValidations.every(validation => validation.isValid)
   if (allValid) {
     let newUser = new User(userValue, passwordValue);
-    storageCreate(newUser);
-    const successfulSignUp = document.querySelector('#successful-signUp')
-    const container = document.querySelector('.signup-inputs')
-    const loaderCatch = document.querySelector('.loader')
-    successfulSignUp.classList.remove('hidden')
-    let hideContainer = setTimeout(function () {
-      container.classList.add('hidden')
-    }, 2000)
-    let showLoader = setTimeout(function () {
-      loaderCatch.classList.remove('hidden')
-    }, 2000)
-    let redirect = setTimeout(function () {
-      location.href = "../LoginPage/LoginPage.html"
-    }, 5000)
+    storageCreate(userValue, newUser);
   }
 }
