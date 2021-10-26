@@ -1,63 +1,71 @@
+import User from "../../models/users.models.js"
+import userStorageHelper from '../../helpers/user-storage.helper.js'
+import userValidation from "../../utils/UserValidation.util.js";
+
+const container = document.querySelector('.signup-inputs')
+container.classList.remove('hidden')
+
 const formSignup = document.querySelector('form');
-formSignup.addEventListener('submit', signup)
+formSignup.addEventListener('submit', signup);
 
-function signup(e) {
-  validUser();
-  validPassword();
-  confirmPassword();
-  
-  e.preventDefault();
+const user = document.querySelector('.input-user');
+const password = document.querySelector('.input-password');
+const passwordConfirm = document.querySelector('.input-confirm-password');
+
+function signup(event) {
+  validAndCreate(user.value.trim(), password.value, passwordConfirm.value);
+  event.preventDefault();
 }
 
-function validUser() {
-  const user = document.querySelector('.input-user');
+function validAndCreate(userValue, passwordValue, passwordToConfirm) {
+  // User Params
+  const userExists = document.querySelector('#user-exists');
+  const userError = document.querySelector('#user-error');
+  const passwordError = document.querySelector('#password-error');
+  const confirmPassword = document.querySelector('#confirm-password-error');
+
+  // Load
+  const successfulSignUp = document.querySelector('#successful-signUp');
+  const loaderCatch = document.querySelector('.loader');
+  const container = document.querySelector('.signup-inputs');
+
   const regex = /^(?=.{6,20}$)[a-zA-Z0-9]+([-._]?[a-zA-Z0-9])+([-_])*$/;
-  const userTest = regex.test(user.value.trim());
+  const userTest = regex.test(userValue);
 
-  if (!userTest) {
-    user.nextElementSibling.classList.remove('hide')
-    user.nextElementSibling.innerHTML = 'Usuário inválido'
-  }
+  const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]{6,}$/
+  const passwordTest = regexp.test(passwordValue);
+  const userValidations = [
+    { isValid: userTest, errorElement: userError },
+    { isValid: passwordTest, errorElement: passwordError },
+    { isValid: passwordValue === passwordToConfirm, errorElement: confirmPassword }
+  ];
 
-  if (userTest) {
-    user.nextElementSibling.innerHTML = ''
-    user.nextElementSibling.classList.add('hide')
+  try {
+    const allValid = userValidations.every(validation => validation.isValid);
 
-    // let storageUsers = JSON.parse(localStorage.getItem('user'))
-    // if (!storageUsers) storageUsers = [];
-    // const user = {
-    //   description: user.value
-    // }
-    // storageUsers.push(user)
-  }
-}
+    if (!allValid) throw new Error('Invalid Params.');
 
-function validPassword() {
-  const password = document.querySelector('.input-password');
-  const regex = /^(?=.{6,}$)(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]/
-  const passwordTest = regex.test(password.value)
+    let newUser = new User(userValue, passwordValue);
+    loaderCatch.classList.remove('hidden'); // Mostra o Loading
+    container.classList.add('hidden'); // Esconde o Form
+    userStorageHelper().createUser(newUser);
 
-  if (!passwordTest) {
-    password.nextElementSibling.classList.remove('hide')
-    password.nextElementSibling.innerHTML = 'Senha inválida'
-  }
-  if (passwordTest) {
-    password.nextElementSibling.innerHTML = ''
-    password.nextElementSibling.classList.add('hide')
-  }
-}
+    successfulSignUp.classList.remove('hidden');
 
-function confirmPassword() {
-  const passwordConfirm = document.querySelector('.input-confirm-password');
-  const password = document.querySelector('.input-password');
+    setTimeout(function () { location.href = "../LoginPage/LoginPage.html" }, 3000);
+  } catch (error) {
+    loaderCatch.classList.add('hidden'); // Esconde o Loading
+    container.classList.remove('hidden'); // Mostra o Form
 
-  if (passwordConfirm.value !== password.value) {
-    passwordConfirm.nextElementSibling.classList.remove('hide')
-    passwordConfirm.nextElementSibling.innerHTML = 'Senhas não coicidem'
-  }
+    if (error.message === 'User already exists.') return userExists.classList.remove('hide');
 
-  if (passwordConfirm.value === password.value) {
-    passwordConfirm.nextElementSibling.classList.add('hide')
-    passwordConfirm.nextElementSibling.innerHTML = ''
+    userExists.classList.add('hide');
+
+    if (error.message === 'Invalid Params.') {
+      for (const validation of userValidations) {
+        userValidation(validation.isValid, validation.errorElement)
+      }
+    }
+    console.log(error);
   }
 }

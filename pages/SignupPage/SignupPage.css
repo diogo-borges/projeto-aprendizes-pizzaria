@@ -1,6 +1,10 @@
 @import url('../../index.css');
+.main {
+  display: flex;
+  justify-content: center;
+}
 
-.SingupPage-container{
+.SingupPage-container {
   width: 1300;
   height: 650;
   background-color: #A0C8F0;
@@ -13,50 +17,94 @@
   flex-direction: column;
 }
 
-.logotipo{
-  width: 30%;
+.logotipo {
+  width: 35%;
+  display: flex;
 }
 
-h1{
-  font-size: 30px;
+h1 {
+  font-size: 35px;
   text-align: center;
   color: #C02A12;
 }
 
-.signup-input{
+.signup-inputs {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 10px;
 }
 
-.input-user,.input-password,.input-confirm-password,.signup-btn{
+.input-user, .input-password, .input-confirm-password, .signup-btn {
   width: 350px;
   height: 50px;
   border-radius: 50px;
   outline: none;
   border-style: none;
   font-family: 'Roboto Mono', monospace;
-}
-
-.input-user,.input-password,.input-confirm-password{
   padding: 15px;
 }
 
-.signup-btn,.cancel-hiperlink{
+.signup-btn, .cancel-hiperlink {
   cursor: pointer;
   text-align: center;
   margin-top: 15px;
   text-decoration: none;
+  width: 395px;
 }
 
-.cancel-hiperlink{
-color: #dd7d0f;
+.cancel-hiperlink {
+  color: #DD7D0F;
+  margin-top: 35px;
 }
 
-.signup-btn:hover{
-  background-color: #dd7d0f;
+.signup-btn {
+  font-size: 15px;
+}
+
+.signup-btn:hover {
+  background-color: #DD7D0F;
   color: white;
+  font-size: 15px;
+}
+
+.tooltip-user, .tooltip-password, .tooltip-password-confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+  background-color: #DD7D0F;
+  border-radius: 100px;
+  padding: 5px;
+  width: 25px;
+  height: 30px;
+  text-decoration: none;
+  border-style: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+[data-tooltip]::after {
+  position: absolute;
+  width: 140px;
+  left: calc(50% - 70px);
+  left: 125%;
+  text-align: center;
+  box-sizing: border-box;
+  content: attr(data-tooltip);
+  color: #DD7D0F;
+  background-color: rgba(255, 255, 255, 0.658);
+  padding: 8px;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.2s;
 }
 
 [data-tooltip]:hover::after {
@@ -75,6 +123,13 @@ color: #dd7d0f;
 .signup-btn-and-hiperlink {
   display: flex;
   flex-direction: column;
+}
+
+.error {
+  font-size: 14px;
+  align-self: center;
+  color: #FF0000;
+  margin: 0;
 }
 
 .success-sign {
