@@ -59,9 +59,62 @@ color: #dd7d0f;
   color: white;
 }
 
-sub {
-  font-size: 14px;
-  align-self: center;
-  color: #ff0000;
-  margin: 0;
+[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.input-tooltips {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-btn-and-hiperlink {
+  display: flex;
+  flex-direction: column;
+}
+
+.success-sign {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 25px;
+  background-color: rgba(42, 185, 42, 0.76);
+  color: white;
+  position: absolute;
+  animation: mymove 2s;
+  width: 390px;
+  text-align: center;
+  bottom: 150px;
+  opacity: 1;
+}
+
+@keyframes mymove {
+  from { bottom: 100px;}
+  to { bottom: 150px;}
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}
+
+.loader{
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid#C02A12;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+}
+
+.hidden {
+  display:none;
 }
