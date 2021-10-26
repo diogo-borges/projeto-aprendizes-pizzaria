@@ -11,20 +11,24 @@
   justify-content: center;
   flex-direction: column;
 }
+
 .logotipo {
   width: 35%;
   display: flex;
 }
+
 h1 {
   font-size: 35px;
   text-align: center;
   color: #C02A12;
 }
+
 .signup-inputs {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .input-user, .input-password, .input-confirm-password, .signup-btn {
   width: 350px;
   height: 50px;
@@ -34,32 +38,37 @@ h1 {
   font-family: 'Roboto Mono', monospace;
   padding: 15px;
 }
+
 .signup-btn, .cancel-hiperlink {
   cursor: pointer;
   text-align: center;
-  margin-left: 15px;
   margin-top: 15px;
   text-decoration: none;
-  width: 390px;
+  width: 395px;
 }
+
 .cancel-hiperlink {
   color: #DD7D0F;
   margin-top: 35px;
 }
+
 .signup-btn {
   font-size: 15px;
 }
+
 .signup-btn:hover {
   background-color: #DD7D0F;
   color: white;
   font-size: 15px;
 }
+
 .tooltip-user, .tooltip-password, .tooltip-password-confirm {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 10px;
 }
+
 [data-tooltip] {
   position: relative;
   cursor: pointer;
@@ -74,11 +83,12 @@ h1 {
   font-weight: bold;
   margin-left: 15px;
 }
+
 [data-tooltip]::after {
   position: absolute;
   width: 140px;
-  right: calc(50% - 70px);
-  right: 125%;
+  left: calc(50% - 70px);
+  left: 125%;
   text-align: center;
   box-sizing: border-box;
   content: attr(data-tooltip);
@@ -91,17 +101,20 @@ h1 {
   transform: translateY(10px);
   transition: opacity 0.3s, transform 0.2s;
 }
+
 [data-tooltip]:hover::after {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
+
 .input-tooltips {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
+
 .signup-btn-and-hiperlink {
   display: flex;
   flex-direction: column;
@@ -112,4 +125,48 @@ h1 {
   align-self: center;
   color: #FF0000;
   margin: 0;
+}
+
+.success-sign {
+  margin-top: 30px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3px;
+  font-size: 18px;
+  border-radius: 15px;
+  background-color: rgba(42, 185, 42, 0.76);
+  color: white;
+  position: relative;
+  animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  from { top: 30px;}
+  to { top: 10px;}
+  from{ opacity: 0;}
+  to{ opacity: 1;}
+}
+
+.loader{
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid#C02A12;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  align-items: center;
+  display: flex;
+  margin-top: 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg);}
+}
+
+.hidden {
+  display:none;
 }
