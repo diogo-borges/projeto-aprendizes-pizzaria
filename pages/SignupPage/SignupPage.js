@@ -1,5 +1,5 @@
 import User from "../../models/users.models.js"
-import storageCreate from '../../helpers/storage.helper.js'
+import userStorageHelper from '../../helpers/user-storage.helper.js'
 import userValidation from "../../utils/UserValidation.util.js";
 
 const container = document.querySelector('.signup-inputs')
@@ -18,36 +18,54 @@ function signup(event) {
 }
 
 function validAndCreate(userValue, passwordValue, passwordToConfirm) {
+  // User Params
+  const userExists = document.querySelector('#user-exists');
   const userError = document.querySelector('#user-error');
   const passwordError = document.querySelector('#password-error');
-  const confirmPassword = document.querySelector('#confirm-password-error')
+  const confirmPassword = document.querySelector('#confirm-password-error');
+
+  // Load
+  const successfulSignUp = document.querySelector('#successful-signUp');
+  const loaderCatch = document.querySelector('.loader');
+  const container = document.querySelector('.signup-inputs');
 
   const regex = /^(?=.{6,20}$)[a-zA-Z0-9]+([-._]?[a-zA-Z0-9])+([-_])*$/;
   const userTest = regex.test(userValue);
 
   const regexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&+])[A-Za-z\d@$!%*#?&+]{6,}$/
-  const passwordTest = regexp.test(passwordValue)
-
+  const passwordTest = regexp.test(passwordValue);
   const userValidations = [
-    {
-      isValid: userTest, errorElement: userError
-    },
+    { isValid: userTest, errorElement: userError },
+    { isValid: passwordTest, errorElement: passwordError },
+    { isValid: passwordValue === passwordToConfirm, errorElement: confirmPassword }
+  ];
 
-    {
-      isValid: passwordTest, errorElement: passwordError
-    },
+  try {
+    const allValid = userValidations.every(validation => validation.isValid);
 
-    {
-      isValid: passwordValue === passwordToConfirm, errorElement: confirmPassword
-    }
-  ]
-  for (const validation of userValidations) {
-    userValidation(validation.isValid, validation.errorElement)
-  }
+    if (!allValid) throw new Error('Invalid Params.');
 
-  const allValid = userValidations.every(validation => validation.isValid)
-  if (allValid) {
     let newUser = new User(userValue, passwordValue);
-    storageCreate(userValue, newUser);
+    loaderCatch.classList.remove('hidden'); // Mostra o Loading
+    container.classList.add('hidden'); // Esconde o Form
+    userStorageHelper().createUser(newUser);
+
+    successfulSignUp.classList.remove('hidden');
+
+    setTimeout(function () { location.href = "../LoginPage/LoginPage.html" }, 3000);
+  } catch (error) {
+    loaderCatch.classList.add('hidden'); // Esconde o Loading
+    container.classList.remove('hidden'); // Mostra o Form
+
+    if (error.message === 'User already exists.') return userExists.classList.remove('hide');
+
+    userExists.classList.add('hide');
+
+    if (error.message === 'Invalid Params.') {
+      for (const validation of userValidations) {
+        userValidation(validation.isValid, validation.errorElement)
+      }
+    }
+    console.log(error);
   }
 }

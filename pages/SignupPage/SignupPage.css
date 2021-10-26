@@ -1,4 +1,9 @@
 @import url('../../index.css');
+.main {
+  display: flex;
+  justify-content: center;
+}
+
 .SingupPage-container {
   width: 1300;
   height: 650;
@@ -128,24 +133,22 @@ h1 {
 }
 
 .success-sign {
-  margin-top: 30px;
-  margin-left: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 3px;
+  padding: 10px;
   font-size: 18px;
-  border-radius: 15px;
+  border-radius: 25px;
   background-color: rgba(42, 185, 42, 0.76);
   color: white;
-  position: relative;
-  animation: mymove 2s infinite;
+  position: absolute;
+  animation: mymove 2s;
+  width: 390px;
+  text-align: center;
+  bottom: 200px;
+  opacity: 1;
 }
 
 @keyframes mymove {
-  from { top: 30px;}
-  to { top: 10px;}
+  from { bottom: 165px;}
+  to { bottom: 200px;}
   from{ opacity: 0;}
   to{ opacity: 1;}
 }
