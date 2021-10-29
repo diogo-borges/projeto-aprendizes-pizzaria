@@ -26,12 +26,11 @@ function storageCompare(userInput, passwordInput) {
   const userExists = document.querySelector('#user-error');
   const userPasswordExists = document.querySelector('#password-error')
   const findNickname = UserStorageHelper().findByNickname(userInput)
-  const findPassword = UserStorageHelper().findPassword(passwordInput)
 
   try {
-    if (!findNickname) throw new Error('User does not exist')
-    if (!findPassword) throw new Error('Password does not match')
-    success()
+    if (!findNickname) throw new Error('User does not exist');
+    if (passwordInput !== atob(findNickname.password)) throw new Error('Password does not match');
+    success();
   } catch (error) {
     if (error.message === 'User does not exist') return userExists.classList.remove('hide')
     userExists.classList.add('hide')
@@ -45,8 +44,7 @@ function success() {
   const container = document.querySelector('.inputs-section') //container com inputs
   container.classList.add('hidden')
   loader.classList.remove('hidden')
-  submitToMainPage.style.marginLeft='240px'
   setTimeout(function () {
     location.href = "../MainPage/MainPage.html"
-  }, 3000)
+  }, 1000)
 }

@@ -23,7 +23,10 @@ h1 {
 }
 
 .login-page-controls{
-  margin-left: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 45%;
 }
 
 .inputs-section , h1 , .loader{

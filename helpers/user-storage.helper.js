@@ -20,9 +20,6 @@ const UserStorageHelper = function () {
     findByNickname: function (nickname) { // GET
       return storageUsers.find(user => user.nickname === nickname);
     },
-    findPassword: function (password){
-      return storageUsers.find(savedPassword => atob(savedPassword.password) === password)
-    },
   }
 }
 
