@@ -5,12 +5,17 @@
 <div class="main">
   <section class="container">
     <img class="main-image" src="../../assets/img/pizza.png">
-    <form id='form' class="login-page-controls" id="login-page-controls">
+    <form id='form' class="login-page-controls">
       <h1>#Login</h1>
+      <div class="inputs-section hidden"> 
       <input class='input-login' type="text" placeholder="Insira seu usuário">
+      <sub id="user-error" class="error hide">Usuário não encontrado</sub>
       <input class='input-password' type="password" placeholder="Insira sua senha">
+      <sub id="password-error" class="error hide">Senha inválida</sub>
       <button class='sign-in-btn' id="sign-in-btn" type="submit">Entrar</button>
       <button class='signup-btn' id="signup-btn">Cadastre-se</button>
+      </div>
+      <footer class="loader hidden"></footer>
     </form>
   </section>
 </div>

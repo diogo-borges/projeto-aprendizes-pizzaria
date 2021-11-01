@@ -6,7 +6,6 @@ const UserStorageHelper = function () {
     createUser: function (user) { // POST
       try {
         const findNickname = this.findByNickname(user.nickname);
-
         if (findNickname) throw new Error('User already exists.');
 
         storageUsers.push(user);

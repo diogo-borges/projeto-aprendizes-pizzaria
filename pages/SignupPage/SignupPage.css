@@ -142,13 +142,13 @@ h1 {
   animation: mymove 2s;
   width: 390px;
   text-align: center;
-  bottom: 200px;
+  bottom: 150px;
   opacity: 1;
 }
 
 @keyframes mymove {
-  from { bottom: 165px;}
-  to { bottom: 200px;}
+  from { bottom: 100px;}
+  to { bottom: 150px;}
   from{ opacity: 0;}
   to{ opacity: 1;}
 }

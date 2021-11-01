@@ -16,3 +16,10 @@ body {
 .hide{
   display: none;
 }
+
+.error {
+  font-size: 14px;
+  align-self: center;
+  color: #FF0000;
+  margin: 0;
+}

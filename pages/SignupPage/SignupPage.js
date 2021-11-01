@@ -52,7 +52,7 @@ function validAndCreate(userValue, passwordValue, passwordToConfirm) {
 
     successfulSignUp.classList.remove('hidden');
 
-    setTimeout(function () { location.href = "../LoginPage/LoginPage.html" }, 3000);
+    setTimeout(function () { location.href = "../LoginPage/LoginPage.html" }, 1500);
   } catch (error) {
     loaderCatch.classList.add('hidden'); // Esconde o Loading
     container.classList.remove('hidden'); // Mostra o Form
