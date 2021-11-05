@@ -1,4 +1,6 @@
+import loggedSession from "../../helpers/user-sessionstorage.helper.js"
 import UserStorageHelper from "../../helpers/user-storage.helper.js"
+import modelSession from "../../models/user-session.model.js"
 
 const container = document.querySelector('.inputs-section')
 container.classList.remove('hidden')
@@ -18,7 +20,7 @@ const user = document.querySelector('.input-login')
 const password = document.querySelector('.input-password')
 
 function mainPageRedirect(e) {
-  storageCompare(user.value, password.value)
+  storageCompare(user.value.toLowerCase(), password.value)
   e.preventDefault()
 }
 
@@ -30,12 +32,15 @@ function storageCompare(userInput, passwordInput) {
   try {
     if (!findNickname) throw new Error('User does not exist');
     if (passwordInput !== atob(findNickname.password)) throw new Error('Password does not match');
+    let userSession = new modelSession(findNickname.id);;
+    loggedSession(userSession);
     success();
   } catch (error) {
     if (error.message === 'User does not exist') return userExists.classList.remove('hide')
     userExists.classList.add('hide')
     if (error.message === 'Password does not match') return userPasswordExists.classList.remove('hide')
     userPasswordExists.classList.add('hide')
+    console.log(error)
   }
 }
 
