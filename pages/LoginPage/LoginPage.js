@@ -1,6 +1,11 @@
+import loading from "../../assets/components/Loading/loading.js"
 import loggedSession from "../../helpers/user-sessionstorage.helper.js"
 import UserStorageHelper from "../../helpers/user-storage.helper.js"
 import modelSession from "../../models/user-session.model.js"
+
+function onLoad(){
+  loading('.toLoader');
+}onLoad();
 
 const container = document.querySelector('.inputs-section')
 container.classList.remove('hidden')
@@ -42,13 +47,14 @@ function storageCompare(userInput, passwordInput) {
     userPasswordExists.classList.add('hide')
     console.log(error)
   }
+
 }
 
 function success() {
-  const loader = document.querySelector('.loader') //classe loader
+  const load = document.querySelector('#loader') //classe loader
   const container = document.querySelector('.inputs-section') //container com inputs
   container.classList.add('hidden')
-  loader.classList.remove('hidden')
+  load.classList.remove('hidden')
   setTimeout(function () {
     location.href = "../MainPage/MainPage.html"
   }, 1000)
