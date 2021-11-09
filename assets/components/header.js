@@ -36,6 +36,9 @@ header {
   background-color: #DD7D0F;
   height: 10%;
   justify-content: space-evenly;
+  position: fixed;
+  top:0;
+  left:0;
 }
 
 .header-logo {
@@ -144,20 +147,20 @@ button {
 </style>
 ${document.body.innerHTML}
 `
-} 
+}
 header();
 
 const profileRedirect = document.getElementById('menu-item-profile');
 profileRedirect.addEventListener('click', myProfileRedirect);
 
 function myProfileRedirect() {
-  location.href= "../UserProfilePage/UserProfilePage.html";
+  location.href = "../UserProfilePage/UserProfilePage.html";
 }
 
 const exit = document.getElementById('menu-item-exit');
 exit.addEventListener('click', exitAndClean);
 
-function exitAndClean(){
+function exitAndClean() {
   sessionStorage.clear();
-  location.href="../LoginPage/LoginPage.html";
+  location.href = "../LoginPage/LoginPage.html";
 }
