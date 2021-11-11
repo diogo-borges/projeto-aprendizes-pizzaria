@@ -1,6 +1,12 @@
 import User from "../../models/users.models.js"
 import userStorageHelper from '../../helpers/user-storage.helper.js'
 import userValidation from "../../utils/UserValidation.util.js";
+import loading from "../../assets/components/Loading/loading.js";
+
+function onLoad(){
+  loading('.SingupPage-container');
+}
+onLoad();
 
 const container = document.querySelector('.signup-inputs')
 container.classList.remove('hidden')
@@ -26,7 +32,7 @@ function validAndCreate(userValue, passwordValue, passwordToConfirm) {
 
   // Load
   const successfulSignUp = document.querySelector('#successful-signUp');
-  const loaderCatch = document.querySelector('.loader');
+  const loaderCatch = document.querySelector('#loader');
   const container = document.querySelector('.signup-inputs');
 
   const regex = /^(?=.{6,20}$)[a-zA-Z0-9]+([-._]?[a-zA-Z0-9])+([-_])*$/;
