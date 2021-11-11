@@ -5,7 +5,8 @@ import loading from "../../assets/components/Loading/loading.js";
 
 function onLoad(){
   loading('.SingupPage-container');
-}onLoad();
+}
+onLoad();
 
 const container = document.querySelector('.signup-inputs')
 container.classList.remove('hidden')

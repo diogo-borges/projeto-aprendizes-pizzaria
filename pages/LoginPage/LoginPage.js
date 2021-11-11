@@ -4,8 +4,9 @@ import UserStorageHelper from "../../helpers/user-storage.helper.js"
 import modelSession from "../../models/user-session.model.js"
 
 function onLoad(){
-  loading('.toLoader');
-}onLoad();
+  loading('.login-page-controls');
+}
+onLoad();
 
 const container = document.querySelector('.inputs-section')
 container.classList.remove('hidden')
