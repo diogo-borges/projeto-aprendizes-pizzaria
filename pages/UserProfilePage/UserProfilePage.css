@@ -1,1 +1,117 @@
 @import url('../../index.css');
+.profile-container {
+	width: 800px;
+	height: 560px;
+	background-color: #A0C8F0;
+	border-radius: 50px;
+	padding: 10px;
+	box-shadow: 0 0 10px 1px #2c2c2c9f;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+h3 {
+	color: #EB1300;
+	font-size: 50px;
+	text-align: center;
+	position: relative;
+	margin-left: 15%;
+}
+
+p {
+	color: #DD7D0F;
+	font-weight: bold;
+}
+
+.profile-inputs {
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	margin-bottom: 15px;
+}
+
+input {
+	outline: none;
+	border-style: none;
+	border-radius: 50px;
+	padding: 6px;
+	font-family: 'Roboto Mono', monospace;
+}
+
+#nickname-input, #name-input, #complement-input, #reference-input, #telephone-input, #save-info {
+	width: 75%;
+}
+
+form {
+	margin-left: 180px;
+}
+
+.address-number-row {
+	display: flex;
+	gap: 28px;
+	height: 5%;
+	flex-direction: row;
+}
+
+.address-title-row {
+	display: flex;
+	flex-direction: row;
+	gap: 150px;
+}
+
+.number-input {
+	width: 15%;
+}
+
+.save-info {
+	border-radius: 50px;
+	outline: none;
+	border-style: none;
+	font-family: 'Roboto Mono', monospace;
+	padding: 10px;
+	cursor: pointer;
+	margin-top: 20px;
+	color: #EB1300;
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0.658);
+	justify-content: center;
+	align-items: center;
+}
+
+.save-info:hover {
+	background-color: #DD7D0F;
+	color: white;
+	font-weight: bold;
+}
+
+.success-saving {
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 25px;
+	background-color: rgba(42, 185, 42, 0.76);
+	color: white;
+	position: absolute;
+	animation: mymove 2s infinite;
+	width: 250px;
+	text-align: center;
+	bottom: 150px;
+	opacity: 1;
+}
+
+@keyframes mymove {
+	from {
+		bottom: 100px;}
+	to {bottom: 150px;}
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.left-title-snackbar {
+	margin-left: 25px;
+}
+
+.hidden {
+	display: none
+}

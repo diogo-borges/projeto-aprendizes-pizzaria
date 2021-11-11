@@ -2,5 +2,40 @@
 <link rel="stylesheet" href="UserProfilePage.css">
 <script type="module" src="../../assets/components/Header/header.js"></script>
 
-
-
+<div class="main">
+  <section class="profile-container">
+    <div class="left-title-snackbar ">
+      <h3 class="profile-title">#Meu Perfil</h3>
+      <footer id="successful-saving" class="success-saving hidden">&#10004 Informações salvas!</footer>
+    </div>
+    <form class="profile-inputs">
+      <section class="nickame-info">
+        <p>Nome de usuário</p>
+        <input class="nickame-input" id="nickname-input" type="text">
+      </section>
+      <section class="name-info">
+        <p>Nome completo</p>
+        <input class="name-input" id="name-input" type="text">
+      </section>
+      <section class="address-info">
+        <div class="address-title-row">
+          <p>Endereço</p>
+          <p id="number-title">Nº</p>
+        </div>
+        <div class="address-number-row">
+          <input class="address-input" id="address-input" type="text">
+          <input class="number-input" id="number-input" type="text">
+        </div>
+        <p>Complemento</p>
+        <input class="complement-input" id="complement-input" type="text">
+        <p>Ponto de Referência</p>
+        <input class="reference-input" id="reference-input" type="text">
+      </section>
+      <section class="contact-info">
+        <p>Telefone</p>
+        <input class="telephone-input" id="telephone-input" type="text">
+      </section>
+      <button class="save-info" id="save-info" type="submit">Salvar</button>
+    </form>
+  </section>
+</div>
