@@ -58,11 +58,15 @@ form {
 .address-title-row {
 	display: flex;
 	flex-direction: row;
-	gap: 150px;
+	gap: 195px;
 }
 
 .number-input {
 	width: 15%;
+}
+
+.address-input{
+	width: 53%
 }
 
 .save-info {
@@ -93,7 +97,7 @@ form {
 	background-color: rgba(42, 185, 42, 0.76);
 	color: white;
 	position: absolute;
-	animation: mymove 2s infinite;
+	animation: mymove 2s;
 	width: 250px;
 	text-align: center;
 	bottom: 150px;
@@ -101,8 +105,7 @@ form {
 }
 
 @keyframes mymove {
-	from {
-		bottom: 100px;}
+	from {bottom: 100px;}
 	to {bottom: 150px;}
 	from {opacity: 0;}
 	to {opacity: 1;}

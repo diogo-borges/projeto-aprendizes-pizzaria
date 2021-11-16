@@ -3,6 +3,7 @@ header {
   flex-direction: row;
   background-color: #DD7D0F;
   height: 10%;
+  width: 100%;
   justify-content: space-evenly;
   position: fixed;
   top: 0;

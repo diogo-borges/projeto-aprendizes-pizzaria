@@ -1,5 +1,4 @@
 import UserStorageHelper from '../../helpers/user-storage.helper.js';
-
 function phoneMask() {
   var element = document.getElementById('telephone-input');
   var maskOptions = {
@@ -22,6 +21,7 @@ const telephoneInput = document.getElementById('telephone-input')
 const sessionLogged = JSON.parse(sessionStorage.getItem('userSession'))
 const storageLogged = JSON.parse(localStorage.getItem('users'))
 
+//getId function
 const user = UserStorageHelper().getId(sessionLogged.id)
 console.log(user)
 
@@ -59,9 +59,11 @@ saveForm.addEventListener('submit', saveProfile);
 function saveProfile(e) {
   e.preventDefault();
   updateProfile(sessionLogged.id);
-
-  // const successBar = document.getElementById('successful-saving')
-  // successBar.classList.remove('hidden')
+  const successBar = document.getElementById('successful-saving')
+  successBar.classList.remove('hidden')
+  setTimeout(function () {
+    successBar.classList.add('hidden')
+  }, 1700)
 }
 
 
