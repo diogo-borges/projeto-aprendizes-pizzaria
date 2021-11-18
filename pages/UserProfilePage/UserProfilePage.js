@@ -22,7 +22,7 @@ const sessionLogged = JSON.parse(sessionStorage.getItem('userSession'))
 const storageLogged = JSON.parse(localStorage.getItem('users'))
 
 //getId function
-const user = UserStorageHelper().getId(sessionLogged.id)
+const user = UserStorageHelper().findById(sessionLogged.id)
 console.log(user)
 
 function pushNickname() {

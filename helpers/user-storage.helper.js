@@ -20,7 +20,7 @@ const UserStorageHelper = function () {
     findByNickname: function (nickname) { // GET
       return storageUsers.find(user => user.nickname === nickname);
     },
-    getId: function(id){
+    findById: function(id){
       return storageUsers.find(user => user.id === id)
     }
   }
