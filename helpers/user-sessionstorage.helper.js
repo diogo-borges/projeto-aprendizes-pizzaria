@@ -1,5 +1,5 @@
 function loggedSession(model) {
-    sessionStorage.setItem('userSession', JSON.stringify(model));
+  sessionStorage.setItem('userSession', JSON.stringify(model));
 }
 
 export default loggedSession;
