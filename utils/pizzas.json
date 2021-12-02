@@ -1,0 +1,139 @@
+[
+	{
+		"name": "HTML",
+		"category": "Dev Júnior",
+		"price": "30,00" ,
+		"description": "Rodelas de calabresa e muçarela" ,
+		"is_sale": true,
+		"image": "../assets/img/MainPage_sabores/Salgadas/Promoções/HTML.jpg"
+	}, 
+
+	{
+		"name": "SQL",
+		"category": "Dev Júnior",
+		"price": "30,00" ,
+		"description": "Muçarela, molho de tomate e orégano" ,
+		"is_sale": true ,
+		"image": "../assets/img/MainPage_sabores/Salgadas/Promoções/SQL.jpg"
+	},
+	
+	{
+		"name": "TCL",
+		"category": "Dev Júnior",
+		"price": "30,00" ,
+		"description": "Rodelas de calabresa, cebola e azeitona preta",
+		"is_sale": true,
+		"image": "../assets/img/MainPage_sabores/Salgadas/Promoções/TCL.jpg"
+	},
+	
+	{
+		"name": "Python" ,
+		"category": "Dev Júnior" ,
+		"price": "32,00" ,
+		"description": "Frango com catupiry, bacon e azeitonas" ,
+		"is_sale": false ,
+		"image": "../assets/img/MainPage_sabores/Salgadas/python.jpeg" 
+	},
+	
+	{
+		"name": "Javascript" ,
+		"category": "Dev Júnior" ,
+		"price": "32,00" ,
+		"description": "Muçarela, tomate e manjericão",
+		"is_sale": false ,
+		"image":"../assets/img/MainPage_sabores/Salgadas/javascript.jpeg" 
+	},
+	
+	{
+		"name": "PHP" ,
+		"category": "Dev Júnior" ,
+		"price": "32,00" ,
+		"description": "Pedaços tomate, abobrinha, champignon e muçarela" ,
+		"is_sale": false,
+		"image":"../assets/img/MainPage_sabores/Salgadas/PHP.jpg" 
+	},
+	
+	{
+		"name": "Kotlin" ,
+		"category": "Dev Pleno",
+		"price": "35,00" ,
+		"description": "Presunto, muçarela, ovos cozidos, ervilha, rocelas de cebola e azeitona",
+		"is_sale": false,
+		"image":"../assets/img/MainPage_sabores/Salgadas/kotlin.jpeg" 
+	},
+	
+	{
+		"name": "Ruby" ,
+		"category": "Dev Pleno",
+		"price": "35,00" ,
+		"description": "Pepperoni, muçarela e manjericão",
+		"is_sale": false ,
+		"image":"../assets/img/MainPage_sabores/Salgadas/ruby.jpeg" 
+	},
+	
+	{
+		"name": "Go" ,
+		"category": "Dev Pleno",
+		"price": "35,00" ,
+		"description": "Catupiry, milho, ervilha e orégano",
+		"is_sale": false ,
+		"image": "../assets/img/MainPage_sabores/Salgadas/go.png" 
+	},
+	
+	{
+		"name": "Java" ,
+		"category": "Dev Sênior",
+		"price": "40,00" ,
+		"description": "Muçarela, provolone, bacon e orégano",
+		"is_sale": false,
+		"image":"../assets/img/MainPage_sabores/Salgadas/java.jpg" 
+	},
+	
+	{
+		"name": "C++" ,
+		"category": "Dev Sênior",
+		"price": "40,00" ,
+		"description": "Muçarela, provolone, gorgonzola e parmesão",
+		"is_sale": false ,
+		"image":"../assets/img/MainPage_sabores/Salgadas/c++.jpg" 
+	},
+	
+	{
+		"name": "ALGOL" ,
+		"category": "Dev Sênior",
+		"price": "40,00" ,
+		"description": "Muçarela, brócolis, frango, bacon e azeitona preta" ,
+		"is_sale": false ,
+		"image": "../assets/img/MainPage_sabores/Salgadas/algol.jpg" 
+	},
+	
+	{
+		"name": "CSS" ,
+		"category": "Especialista",
+		"price": "40,00" ,
+		"description": "Creme de avelã e rodelas de banana",
+		"is_sale": false ,
+		"image": "../assets/img/MainPage_sabores/Doces/css.jpg" 
+	},
+	
+	{
+		"name": "SASS" ,
+		"category": "Especialista",
+		"price": "40,00" ,
+		"description": "Brigadeiro com pedaços de morango",
+		"is_sale": false ,
+		"image": "../assets/img/MainPage_sabores/Doces/sass.jpg" 
+	},
+
+	
+	{
+		"name": "React.JS" ,
+		"category": "Especialista",
+		"price": "40,00" ,
+		"description": "Prestígio",
+		"is_sale": false ,
+		"image": "../assets/img/MainPage_sabores/Doces/react.jpg" 
+	}
+	
+]
+
