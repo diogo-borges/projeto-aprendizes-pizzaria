@@ -6,7 +6,7 @@ export default [
 		"price": "30,00" ,
 		"description": "Rodelas de calabresa e muçarela" ,
 		"is_sale": true,
-		"image": "../assets/img/MainPage_sabores/Salgadas/Promo/HTML.jpg"
+		"image": "../assets/img/MainPage_flavours/Salty/Promo/HTML.jpg"
 	}, 
 
 	{
@@ -16,7 +16,7 @@ export default [
 		"price": "30,00" ,
 		"description": "Muçarela, molho de tomate e orégano" ,
 		"is_sale": true ,
-		"image": "../assets/img/MainPage_sabores/Salgadas/Promo/SQL.jpg"
+		"image": "../assets/img/MainPage_flavours/Salty/Promo/SQL.jpg"
 	},
 	
 	{
@@ -26,7 +26,7 @@ export default [
 		"price": "30,00" ,
 		"description": "Rodelas de calabresa, cebola e azeitona preta",
 		"is_sale": true,
-		"image": "../assets/img/MainPage_sabores/Salgadas/Promo/TCL.jpg"
+		"image": "../assets/img/MainPage_flavours/Salty/Promo/TCL.jpg"
 	},
 	
 	{
@@ -36,7 +36,7 @@ export default [
 		"price": "32,00" ,
 		"description": "Frango com catupiry, bacon e azeitonas" ,
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_sabores/Salgadas/python.jpeg" 
+		"image": "../assets/img/MainPage_flavours/Salty/python.jpeg" 
 	},
 	
 	{
@@ -46,7 +46,7 @@ export default [
 		"price": "32,00" ,
 		"description": "Muçarela, tomate e manjericão",
 		"is_sale": false ,
-		"image":"../assets/img/MainPage_sabores/Salgadas/javascript.jpeg" 
+		"image":"../assets/img/MainPage_flavours/Salty/javascript.jpeg" 
 	},
 	
 	{
@@ -56,7 +56,7 @@ export default [
 		"price": "32,00" ,
 		"description": "Pedaços tomate, abobrinha, champignon e muçarela" ,
 		"is_sale": false,
-		"image":"../assets/img/MainPage_sabores/Salgadas/PHP.jpg" 
+		"image":"../assets/img/MainPage_flavours/Salty/PHP.jpg" 
 	},
 	
 	{
@@ -66,7 +66,7 @@ export default [
 		"price": "35,00" ,
 		"description": "Presunto, muçarela, ovos cozidos, ervilha, rocelas de cebola e azeitona",
 		"is_sale": false,
-		"image":"../assets/img/MainPage_sabores/Salgadas/kotlin.jpeg" 
+		"image":"../assets/img/MainPage_flavours/Salty/kotlin.jpeg" 
 	},
 	
 	{
@@ -76,7 +76,7 @@ export default [
 		"price": "35,00" ,
 		"description": "Pepperoni, muçarela e manjericão",
 		"is_sale": false ,
-		"image":"../assets/img/MainPage_sabores/Salgadas/ruby.jpeg" 
+		"image":"../assets/img/MainPage_flavours/Salty/ruby.jpeg" 
 	},
 	
 	{
@@ -86,7 +86,7 @@ export default [
 		"price": "35,00" ,
 		"description": "Catupiry, milho, ervilha e orégano",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_sabores/Salgadas/go.png" 
+		"image": "../assets/img/MainPage_flavours/Salty/go.png" 
 	},
 	
 	{
@@ -96,7 +96,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Muçarela, provolone, bacon e orégano",
 		"is_sale": false,
-		"image":"../assets/img/MainPage_sabores/Salgadas/java.jpg" 
+		"image":"../assets/img/MainPage_flavours/Salty/java.jpg" 
 	},
 	
 	{
@@ -106,7 +106,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Muçarela, provolone, gorgonzola e parmesão",
 		"is_sale": false ,
-		"image":"../assets/img/MainPage_sabores/Salgadas/c++.jpg" 
+		"image":"../assets/img/MainPage_flavours/Salty/c++.jpg" 
 	},
 	
 	{
@@ -116,7 +116,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Muçarela, brócolis, frango, bacon e azeitona preta" ,
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_sabores/Salgadas/algol.jpg" 
+		"image": "../assets/img/MainPage_flavours/Salty/algol.jpg" 
 	},
 	
 	{
@@ -126,7 +126,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Creme de avelã e rodelas de banana",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_sabores/Doces/css.jpg" 
+		"image": "../assets/img/MainPage_flavours/Sweet/css.jpg" 
 	},
 	
 	{
@@ -136,7 +136,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Brigadeiro com pedaços de morango",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_sabores/Doces/sass.jpg" 
+		"image": "../assets/img/MainPage_flavours/Sweet/sass.jpg" 
 	},
 
 	
@@ -147,7 +147,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Prestígio",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_sabores/Doces/react.jpg" 
+		"image": "../assets/img/MainPage_flavours/Sweet/react.jpg" 
 	}
 	
 ]
