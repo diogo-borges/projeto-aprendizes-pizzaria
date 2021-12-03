@@ -1,32 +1,36 @@
-[
+export default [
 	{
+		"id": 0,
 		"name": "HTML",
 		"category": "Dev Júnior",
 		"price": "30,00" ,
 		"description": "Rodelas de calabresa e muçarela" ,
 		"is_sale": true,
-		"image": "../assets/img/MainPage_sabores/Salgadas/Promoções/HTML.jpg"
+		"image": "../assets/img/MainPage_sabores/Salgadas/Promo/HTML.jpg"
 	}, 
 
 	{
+		"id": 1,
 		"name": "SQL",
 		"category": "Dev Júnior",
 		"price": "30,00" ,
 		"description": "Muçarela, molho de tomate e orégano" ,
 		"is_sale": true ,
-		"image": "../assets/img/MainPage_sabores/Salgadas/Promoções/SQL.jpg"
+		"image": "../assets/img/MainPage_sabores/Salgadas/Promo/SQL.jpg"
 	},
 	
 	{
+		"id": 2,
 		"name": "TCL",
 		"category": "Dev Júnior",
 		"price": "30,00" ,
 		"description": "Rodelas de calabresa, cebola e azeitona preta",
 		"is_sale": true,
-		"image": "../assets/img/MainPage_sabores/Salgadas/Promoções/TCL.jpg"
+		"image": "../assets/img/MainPage_sabores/Salgadas/Promo/TCL.jpg"
 	},
 	
 	{
+		"id": 3,
 		"name": "Python" ,
 		"category": "Dev Júnior" ,
 		"price": "32,00" ,
@@ -36,6 +40,7 @@
 	},
 	
 	{
+		"id": 4,
 		"name": "Javascript" ,
 		"category": "Dev Júnior" ,
 		"price": "32,00" ,
@@ -45,6 +50,7 @@
 	},
 	
 	{
+		"id": 5,
 		"name": "PHP" ,
 		"category": "Dev Júnior" ,
 		"price": "32,00" ,
@@ -54,6 +60,7 @@
 	},
 	
 	{
+		"id": 6,
 		"name": "Kotlin" ,
 		"category": "Dev Pleno",
 		"price": "35,00" ,
@@ -63,6 +70,7 @@
 	},
 	
 	{
+		"id": 7,
 		"name": "Ruby" ,
 		"category": "Dev Pleno",
 		"price": "35,00" ,
@@ -72,6 +80,7 @@
 	},
 	
 	{
+		"id": 8,
 		"name": "Go" ,
 		"category": "Dev Pleno",
 		"price": "35,00" ,
@@ -81,6 +90,7 @@
 	},
 	
 	{
+		"id": 9,
 		"name": "Java" ,
 		"category": "Dev Sênior",
 		"price": "40,00" ,
@@ -90,6 +100,7 @@
 	},
 	
 	{
+		"id": 10,
 		"name": "C++" ,
 		"category": "Dev Sênior",
 		"price": "40,00" ,
@@ -99,6 +110,7 @@
 	},
 	
 	{
+		"id": 11,
 		"name": "ALGOL" ,
 		"category": "Dev Sênior",
 		"price": "40,00" ,
@@ -108,6 +120,7 @@
 	},
 	
 	{
+		"id": 12,
 		"name": "CSS" ,
 		"category": "Especialista",
 		"price": "40,00" ,
@@ -117,6 +130,7 @@
 	},
 	
 	{
+		"id": 13,
 		"name": "SASS" ,
 		"category": "Especialista",
 		"price": "40,00" ,
@@ -127,6 +141,7 @@
 
 	
 	{
+		"id": 14,
 		"name": "React.JS" ,
 		"category": "Especialista",
 		"price": "40,00" ,

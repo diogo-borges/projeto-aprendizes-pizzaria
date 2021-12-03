@@ -1,4 +1,8 @@
 @import url('../../index.css');
+body{
+  justify-content: center;
+}
+
 .main {
   display: flex;
   justify-content: center;

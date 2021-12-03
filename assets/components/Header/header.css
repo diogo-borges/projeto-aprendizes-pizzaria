@@ -5,9 +5,9 @@ header {
   height: 10%;
   width: 100%;
   justify-content: space-evenly;
-  position: fixed;
   top: 0;
   left: 0;
+  min-height: 75px; 
 }
 
 .header-logo {
