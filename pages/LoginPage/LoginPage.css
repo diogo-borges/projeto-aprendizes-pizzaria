@@ -1,4 +1,8 @@
 @import url('../../index.css');
+body{
+  justify-content: center;
+}
+
 .container {
   width: 1300px;
   height: 650px;

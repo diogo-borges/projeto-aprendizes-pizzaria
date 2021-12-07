@@ -22,7 +22,7 @@ const header = function () {
         <a class="menu-item-exit" id="menu-item-exit">Sair</a>
     </section>
 </header>
-</body>
+
 ${document.body.innerHTML}
 `
 }
