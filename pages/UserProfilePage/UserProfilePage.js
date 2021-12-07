@@ -1,4 +1,6 @@
 import UserStorageHelper from '../../helpers/user-storage.helper.js';
+import footer from "../../assets/components/Footer/footer.js";
+
 function phoneMask() {
   var element = document.getElementById('telephone-input');
   var maskOptions = {
@@ -66,7 +68,5 @@ function saveProfile(e) {
   }, 1700)
 }
 
-
-
-
-
+const footerShow = document.querySelector("#footer")
+footer(footerShow);
