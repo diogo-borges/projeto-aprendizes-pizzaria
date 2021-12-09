@@ -13,6 +13,11 @@
 	}
 }
 
+.carousel {
+	display: flex;
+	justify-content: center;
+}
+
 .carousel-container {
 	height: 300px;
 	width: 1000px;

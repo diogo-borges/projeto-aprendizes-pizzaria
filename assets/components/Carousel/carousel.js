@@ -1,16 +1,10 @@
-function Carousel(element, query) {
-	query.innerHTML = ` 
-			<div class='div-previous-arrow'>
-			<a class="previous-arrow">&#10094;</a>
-			</div>
-			<div class='div-next-arrow'>
-			<a class="next-arrow">&#10095;</a>
-			</div>`
+function getCarouselContainer(element) {
+	let carouselContainer = '';
 
-	for (var i = 0; i <= element.length; i++) {
-		query.innerHTML = `
-			${query.innerHTML}
-			<div class="carousel-container fade">
+	for (var i = 0; i < element.length; i++) {
+		carouselContainer = `
+			${carouselContainer}
+			<div class="carousel-container fade${i === 0 ? '' : ' hide'}">
       <img src=${element[i].image} style="width: 45%; height: 100%;">
       <div class="carousel-info">
         <p class="pizza-title">${element[i].name}</p>
@@ -26,39 +20,50 @@ function Carousel(element, query) {
     </div>`
 	}
 
+	return carouselContainer;
+}
+
+function addCarouselEvent() {
+	let slideIndex = 1;
+	const slides = document.getElementsByClassName('carousel-container');
+
 	const prev = document.querySelector('.previous-arrow');
-	prev.addEventListener('click',()=>moveSlides(-1));
-	console.log('funcionou')
+	prev.addEventListener('click', () => moveSlides(-1));
+
 	const next = document.querySelector('.next-arrow');
-	next.addEventListener('click',()=>moveSlides(1));
+	next.addEventListener('click', () => moveSlides(1));
+
+	function moveSlides(number) {
+		showSlides(slideIndex += number);
+	}
+
+	function showSlides(number) {
+		if (number > slides.length) {
+			slideIndex = 1;
+		}
+		if (number < 1) {
+			slideIndex = slides.length
+		}
+		for (var i = 0; i < slides.length; i++) {
+			slides[i].classList.add('hide');
+		}
+		slides[slideIndex - 1].classList.remove('hide');
+	}
 }
 
-let slideIndex = 1;
-const slides = document.getElementsByClassName('.carousel-container')
+function Carousel(element, query) {
+	query.innerHTML =
+		`<section class="carousel">
+			<div class='div-previous-arrow'>
+				<a class="previous-arrow">&#10094;</a>
+			</div>
+			${getCarouselContainer(element)}
+			<div class='div-next-arrow'>
+				<a class="next-arrow">&#10095;</a>
+			</div>
+		</section>`
 
-
-function moveSlides(number) {
-	showSlides(slideIndex += number);
+	addCarouselEvent();
 }
-
-function showSlides(number) {
-	if (number > slides.length) {
-		slideIndex = 1;
-	}
-	if (number < 1) {
-		slideIndex = slides.length
-	}
-	for (var i = 0; i < slides.length; i++) {
-		slides[i].style.display = "none"
-	}
-	slides[slideIndex -1].style.display = "flex";
-}
-
-// const prev = document.querySelector('.previous-arrow')
-// prev.setAttribute('onclick', 'moveSlides(-1)')
-// const next = document.querySelector('.next-arrow')
-// next.setAttribute('onclick', "moveSlides(1)")
-
-
 
 export default Carousel;
