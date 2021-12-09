@@ -1,14 +1,19 @@
 @import url('../../index.css');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500&display=swap');
 
-body{
-    font-family: 'M PLUS 1 Code', sans-serif;
-    font-weight: 500;
+body {
+	font-family: 'M PLUS 1 Code', sans-serif;
+	font-weight: 500;
 }
 
+.dev-junior, .dev-pleno, .dev-senior, .specialist {
+	display: flex;
+	flex-direction: row;
+	font-size: 30px;
+}
 
-.dev-junior, .dev-pleno, .dev-senior, .specialist{
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
+.div-sale-title {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
 }

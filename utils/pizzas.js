@@ -6,7 +6,7 @@ export default [
 		"price": "30,00" ,
 		"description": "Rodelas de calabresa e muçarela" ,
 		"is_sale": true,
-		"image": "../assets/img/MainPage_flavours/Salty/Promo/HTML.jpg"
+		"image": "../../assets/img/MainPage_flavours/Salty/Promo/HTML.jpg"
 	}, 
 
 	{
@@ -16,7 +16,7 @@ export default [
 		"price": "30,00" ,
 		"description": "Muçarela, molho de tomate e orégano" ,
 		"is_sale": true ,
-		"image": "../assets/img/MainPage_flavours/Salty/Promo/SQL.jpg"
+		"image": "../../assets/img/MainPage_flavours/Salty/Promo/SQL.jpg"
 	},
 	
 	{
@@ -24,9 +24,9 @@ export default [
 		"name": "TCL",
 		"category": "Dev Júnior",
 		"price": "30,00" ,
-		"description": "Rodelas de calabresa, cebola e azeitona preta",
+		"description": "Calabresa, cebola e azeitona preta",
 		"is_sale": true,
-		"image": "../assets/img/MainPage_flavours/Salty/Promo/TCL.jpg"
+		"image": "../../assets/img/MainPage_flavours/Salty/Promo/TCL.jpg"
 	},
 	
 	{
