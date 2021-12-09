@@ -1,4 +1,5 @@
 @import url('../../index.css');
+
 .profile-container {
 	width: 800px;
 	height: 560px;
@@ -117,4 +118,8 @@ form {
 
 .hidden {
 	display: none
+}
+
+#footer{
+	width: 100%;
 }
