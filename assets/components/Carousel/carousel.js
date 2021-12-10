@@ -4,7 +4,7 @@ function getCarouselContainer(element) {
   for (var i = 0; i < element.length; i++) {
     carouselContainer = `
 			${carouselContainer}
-			<div class="carousel-container fade${i === 0 ? '' : ' hide'}">
+			<div id='${element[i].id}' class="carousel-container fade${i === 0 ? '' : ' hide'}">
     	<img src=${element[i].image} style="width: 45%; height: 100%;">
       <div class="carousel-info">
         <p class="pizza-title">${element[i].name}</p>
