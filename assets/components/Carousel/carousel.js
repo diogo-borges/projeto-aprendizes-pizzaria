@@ -5,7 +5,7 @@ function getCarouselContainer(element) {
 		carouselContainer = `
 			${carouselContainer}
 			<div class="carousel-container fade${i === 0 ? '' : ' hide'}">
-      <img src=${element[i].image} style="width: 45%; height: 100%;">
+    	<img src=${element[i].image} style="width: 45%; height: 100%;">
       <div class="carousel-info">
         <p class="pizza-title">${element[i].name}</p>
         <p class="pizza-description">${element[i].description}</p>
@@ -16,7 +16,7 @@ function getCarouselContainer(element) {
         </div>
         <input class='pizza-amount' type="number" value="1" min="1">
         <button class='pizza-buy'><img src="../../assets/img/shopping-cart-solid.svg"></button>
-    </div>
+		</div>
     </div>`
 	}
 

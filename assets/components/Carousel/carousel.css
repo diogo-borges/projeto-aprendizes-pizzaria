@@ -1,13 +1,12 @@
-/* .fade {
+.fade {
 	animation-name: fade;
 	animation-duration: 1.5s;
-} */
+}
 
 @keyframes fade {
 	from {
 		opacity: .6
 	}
-
 	to {
 		opacity: 1
 	}
@@ -20,7 +19,7 @@
 
 .carousel-container {
 	height: 300px;
-	width: 1000px;
+	width: 880px;
 	background-color: #DD7D0F;
 	display: flex;
 	flex-wrap: wrap;
@@ -32,6 +31,7 @@
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	width: 300px;
 }
 
 .carousel-buy-tools {
@@ -39,14 +39,11 @@
 	flex-direction: row;
 	justify-content: space-evenly;
 	align-items: center;
-}
-
-.carousel-info, .carousel-buy-tools {
-	margin-right: 30px;
+	width: 300px;
 }
 
 .pizza-title {
-	font-size: 38px;
+	font-size: 48px;
 	color: white;
 	font-weight: medium;
 	margin: 0;
@@ -54,7 +51,7 @@
 
 .pizza-description, .pizza-price {
 	color: white;
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: normal;
 }
 
@@ -100,7 +97,6 @@
 
 .previous-arrow, .next-arrow {
 	display: flex;
-	position: absolute;
 	align-content: center;
 	flex-wrap: wrap;
 	cursor: pointer;
@@ -108,7 +104,7 @@
 	padding: 10px;
 	font-size: 25px;
 	border-radius: 0 3px 3px 0;
-	background-color: rgba(255, 255, 255, 0.856);
+	background-color: rgba(255, 255, 255);
 }
 
 .next-arrow {

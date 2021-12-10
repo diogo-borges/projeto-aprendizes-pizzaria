@@ -24,7 +24,7 @@ export default [
 		"name": "TCL",
 		"category": "Dev Júnior",
 		"price": "30,00" ,
-		"description": "Calabresa, cebola e azeitona preta",
+		"description": "Rodelas de calabresa, cebola e azeitona preta",
 		"is_sale": true,
 		"image": "../../assets/img/MainPage_flavours/Salty/Promo/TCL.jpg"
 	},
