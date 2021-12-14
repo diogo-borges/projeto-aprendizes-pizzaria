@@ -22,24 +22,8 @@ function getPizzaCardsContainer(element) {
   return getPizzasCards;
 }
 
-// function descriptionEvent() {
-//   const pizzasIngredients = document.getElementsByClassName("pizza-card-description");
-//   // const pizzaPhotoHover = document.querySelector(".pizza-photo");
-//   pizzasIngredients[2].addEventListener('mouseover', showDescription());
-//   pizzasIngredients[2].addEventListener('mouseout', hideDescription());
-
-//   function showDescription() {
-//     pizzasIngredients[2].classList.remove('hide')
-//   }
-
-//   function hideDescription() {
-//     pizzasIngredients[2].classList.add('hide')
-//   }
-// }
-
 function pizzaCards(element, query) {
   query.innerHTML = `${getPizzaCardsContainer(element)}`
-  // descriptionEvent();
 }
 
 export default pizzaCards;

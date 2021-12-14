@@ -67,25 +67,6 @@
 	align-items: center;
 }
 
-/* .pizza-card-description {
-	font-family: 'Roboto Mono', monospace;
-	font-size: 20px;
-	position: absolute;
-	font-weight: bold;
-	text-align: center;
-	display: flex;
-	width: 15%;
-} */
-
-/* teste tooltip */
-
-
-/*  
-[data-toggle]:hover{
-	background-color: #c97b22c4;
-	content: attr(data-toggle);
-} */
-
 .pizza-card-description{
 	font-family: 'Roboto Mono', monospace;
 	display: flex;
