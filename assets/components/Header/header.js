@@ -13,11 +13,11 @@ const header = function () {
     </section>
 
     <section class="btn-container-itens">
-        <button class="menu-item-car" type="button" id="menu-item-car" data-tooltip="Carrinho"><img class= "shopping-cart-logo" 
+        <button class="menu-item-car" type="button" id="menu-item-car" data-toggle="Carrinho"><img class= "shopping-cart-logo" 
             src="../../assets/img/shopping-cart-solid.svg"></button>
-        <button class="menu-item-orders" type="button" id="menu-item-orders" data-tooltip="Meus pedidos"><img class="clipboard-logo" 
+        <button class="menu-item-orders" type="button" id="menu-item-orders" data-toggle="Meus pedidos"><img class="clipboard-logo" 
             src="../../assets/img/clipboard-list-solid.svg"></button>
-        <button class="menu-item-profile" type="button" id="menu-item-profile" data-tooltip="Meu perfil" ><img class="user-logo" 
+        <button class="menu-item-profile" type="button" id="menu-item-profile" data-toggle="Meu perfil" ><img class="user-logo" 
             src="../../assets/img/user-solid.svg"></button>
         <a class="menu-item-exit" id="menu-item-exit">Sair</a>
     </section>

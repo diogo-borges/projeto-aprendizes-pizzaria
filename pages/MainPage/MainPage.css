@@ -8,14 +8,34 @@ body {
 
 .dev-junior, .dev-pleno, .dev-senior, .specialist {
   display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.dev-junior-titles, .dev-pleno-titles, .dev-senior-titles, .dev-specialist-titles{
+  display: flex;
   flex-direction: row;
-  font-size: 30px;
+  margin-left: 15px;
 }
 
 .div-sale-title {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+}
+
+.div-pizzas-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.dev-junior-card, .dev-pleno-card, .dev-senior-card, .specialist-card{
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-left: 150px;
+
 }
 
 #footer{
