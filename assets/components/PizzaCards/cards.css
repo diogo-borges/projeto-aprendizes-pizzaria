@@ -1,0 +1,106 @@
+.pizzas-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	height: 50%;
+}
+
+.container-pizza-photo {
+	width: 55%;
+}
+
+.container-pizza-controls {
+	width: 55%;
+	height: 10%;
+	background-color: #DD7D0F;
+	display: flex;
+	flex-direction: column;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.pizza-card-title {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 22px;
+	color: white;
+	font-weight: medium;
+	margin: 0;
+}
+
+.pizza-card-amount {
+	height: 27%;
+	width: 17%;
+	border-radius: 50px;
+	outline: none;
+	border: none;
+	padding: 4px;
+}
+
+.pizza-card-buy {
+	height: 22%;
+	width: 13%;
+	border-radius: 30px;
+	padding: 4px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+
+.pizza-card-price {
+	font-size: 17px;
+	padding: 4px;
+	background-color: #BE2e16;
+	color: white;
+	border-radius: 50px;
+	width: 25%;
+	text-align: center;
+}
+
+.pizza-controls {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.pizza-card-description{
+	font-family: 'Roboto Mono', monospace;
+	display: flex;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+[name] {
+	position: relative;
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+}
+
+[name]::after {
+	position: absolute;
+	width: 94%;
+	height: 235px;
+	padding: 8px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	content: attr(name);
+	color: white;
+	background-color: #dd7d0fc2;
+	font-weight: bold;
+	visibility: hide;
+	opacity: 0;
+	transform: translateY(10px);
+	transition: opacity 0.3s, transform 0.2s;
+}
+
+[name]:hover::after {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}

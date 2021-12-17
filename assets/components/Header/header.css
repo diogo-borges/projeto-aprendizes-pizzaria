@@ -60,7 +60,7 @@ header {
   cursor: pointer
 }
 
-[data-tooltip] {
+[data-toggle] {
   position: relative;
   cursor: pointer;
   text-decoration: none;
@@ -71,13 +71,13 @@ header {
   border-radius: 10px;
 }
 
-[data-tooltip]::after {
+[data-toggle]::after {
   position: absolute;
   width: 100px;
   top: 110%;
   left: 10%;
   box-sizing: border-box;
-  content: attr(data-tooltip);
+  content: attr(data-toggle);
   color: white;
   background-color: #A0C8F0;
   padding: 8px;
@@ -88,7 +88,7 @@ header {
   transition: opacity 0.3s, transform 0.2s;
 }
 
-[data-tooltip]:hover::after {
+[data-toggle]:hover::after {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);

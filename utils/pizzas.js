@@ -36,7 +36,7 @@ export default [
 		"price": "32,00" ,
 		"description": "Frango com catupiry, bacon e azeitonas" ,
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_flavours/Salty/python.jpeg" 
+		"image": "../../assets/img/MainPage_flavours/Salty/python.png" 
 	},
 	
 	{
@@ -46,7 +46,7 @@ export default [
 		"price": "32,00" ,
 		"description": "Muçarela, tomate e manjericão",
 		"is_sale": false ,
-		"image":"../assets/img/MainPage_flavours/Salty/javascript.jpeg" 
+		"image":"../../assets/img/MainPage_flavours/Salty/javascript.png" 
 	},
 	
 	{
@@ -56,7 +56,7 @@ export default [
 		"price": "32,00" ,
 		"description": "Pedaços tomate, abobrinha, champignon e muçarela" ,
 		"is_sale": false,
-		"image":"../assets/img/MainPage_flavours/Salty/PHP.jpg" 
+		"image":"../../assets/img/MainPage_flavours/Salty/PHP.jpg" 
 	},
 	
 	{
@@ -66,7 +66,7 @@ export default [
 		"price": "35,00" ,
 		"description": "Presunto, muçarela, ovos cozidos, ervilha, rocelas de cebola e azeitona",
 		"is_sale": false,
-		"image":"../assets/img/MainPage_flavours/Salty/kotlin.jpeg" 
+		"image":"../../assets/img/MainPage_flavours/Salty/kotlin.png" 
 	},
 	
 	{
@@ -76,7 +76,7 @@ export default [
 		"price": "35,00" ,
 		"description": "Pepperoni, muçarela e manjericão",
 		"is_sale": false ,
-		"image":"../assets/img/MainPage_flavours/Salty/ruby.jpeg" 
+		"image":"../../assets/img/MainPage_flavours/Salty/ruby.png" 
 	},
 	
 	{
@@ -86,7 +86,7 @@ export default [
 		"price": "35,00" ,
 		"description": "Catupiry, milho, ervilha e orégano",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_flavours/Salty/go.png" 
+		"image": "../../assets/img/MainPage_flavours/Salty/go.png" 
 	},
 	
 	{
@@ -96,7 +96,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Muçarela, provolone, bacon e orégano",
 		"is_sale": false,
-		"image":"../assets/img/MainPage_flavours/Salty/java.jpg" 
+		"image":"../../assets/img/MainPage_flavours/Salty/java.png" 
 	},
 	
 	{
@@ -106,7 +106,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Muçarela, provolone, gorgonzola e parmesão",
 		"is_sale": false ,
-		"image":"../assets/img/MainPage_flavours/Salty/c++.jpg" 
+		"image":"../../assets/img/MainPage_flavours/Salty/c++.png" 
 	},
 	
 	{
@@ -116,7 +116,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Muçarela, brócolis, frango, bacon e azeitona preta" ,
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_flavours/Salty/algol.jpg" 
+		"image": "../../assets/img/MainPage_flavours/Salty/algol.png" 
 	},
 	
 	{
@@ -126,7 +126,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Creme de avelã e rodelas de banana",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_flavours/Sweet/css.jpg" 
+		"image": "../../assets/img/MainPage_flavours/Sweet/css.png" 
 	},
 	
 	{
@@ -136,7 +136,7 @@ export default [
 		"price": "40,00" ,
 		"description": "Brigadeiro com pedaços de morango",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_flavours/Sweet/sass.jpg" 
+		"image": "../../assets/img/MainPage_flavours/Sweet/sass.png" 
 	},
 
 	
@@ -145,9 +145,9 @@ export default [
 		"name": "React.JS" ,
 		"category": "Especialista",
 		"price": "40,00" ,
-		"description": "Prestígio",
+		"description": "Brigadeiro, chocolate branco e coco ralado",
 		"is_sale": false ,
-		"image": "../assets/img/MainPage_flavours/Sweet/react.jpg" 
+		"image": "../../assets/img/MainPage_flavours/Sweet/react.png" 
 	}
 	
 ]
