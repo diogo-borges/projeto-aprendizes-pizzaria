@@ -1,8 +1,8 @@
-import idUser from "../utils/UserId.util.js";
+import idUser from "../utils/generateId.util.js";
 
 class cartItem {
 	constructor(idPizza, pizzaAmount) {
-		this.id = idUser();
+		this.id = generateId();
 		this.pizzaId = idPizza;
 		this.amount = pizzaAmount; 
 }};
