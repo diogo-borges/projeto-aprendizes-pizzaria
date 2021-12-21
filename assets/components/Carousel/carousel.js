@@ -1,21 +1,21 @@
-function getCarouselContainer(element) {
+function getCarouselContainer(pizza, onClick) {
+  window.OnBuyInCarousel = onClick;
   let carouselContainer = '';
-
-  for (var i = 0; i < element.length; i++) {
+  for (var i = 0; i < pizza.length; i++) {
     carouselContainer = `
 			${carouselContainer}
-			<div id='${element[i].id}' class="carousel-container fade${i === 0 ? '' : ' hide'}">
-    	<img src=${element[i].image} style="width: 45%; height: 100%;">
+			<div id='${pizza[i].id}' class="carousel-container fade${i === 0 ? '' : ' hide'}">
+    	<img src=${pizza[i].image} style="width: 45%; height: 100%;">
       <div class="carousel-info">
-        <p class="pizza-title">${element[i].name}</p>
-        <p class="pizza-description">${element[i].description}</p>
+        <p class="pizza-title">${pizza[i].name}</p>
+        <p class="pizza-description">${pizza[i].description}</p>
       </div>
       <div class="carousel-buy-tools">
         <div class="pizza-price-container">
-        <p class="pizza-price">${element[i].price}</p>
+        <p class="pizza-price">${pizza[i].price}</p>
         </div>
-        <input class='pizza-amount' type="number" value="1" min="1">
-        <button class='pizza-buy'><img src="../../assets/img/shopping-cart-solid.svg"></button>
+        <input id='pizza-amount-${pizza[i].id}' class='pizza-amount' type='number' value=1 min=1 >
+        <button class='pizza-buy' onclick="OnBuyInCarousel(${pizza[i].id});"><img src="../../assets/img/shopping-cart-solid.svg"></button>
 		</div>
     </div>`
   }
@@ -51,13 +51,13 @@ function addCarouselEvent() {
   }
 }
 
-function Carousel(element, query) {
+function Carousel(pizza, query, onClick) {
   query.innerHTML =
     `<section class="carousel">
 			<div class='div-previous-arrow'>
 				<a class="previous-arrow">&#10094;</a>
 			</div>
-			${getCarouselContainer(element)}
+			${getCarouselContainer(pizza, onClick)}
 			<div class='div-next-arrow'>
 				<a class="next-arrow">&#10095;</a>
 			</div>
