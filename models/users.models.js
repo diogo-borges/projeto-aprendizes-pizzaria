@@ -1,8 +1,8 @@
-import idUser from "../utils/UserId.util.js" ;
+import generateId from "../utils/generateId.util.js" ;
 
 class User {
   constructor(nickname, password, name = '', address = {}, phone = '', updateAt = '', createdAt = new Date(Date.now()).toISOString()) {
-    this.id = idUser().toString();
+    this.id = generateId().toString();
     this.nickname = nickname.toLowerCase();
     this.password = btoa(password);
     this.name = name || '' ;
