@@ -1,4 +1,4 @@
-import idUser from "../utils/generateId.util.js";
+import generateId from "../utils/generateId.util.js";
 
 class cartItem {
 	constructor(idPizza, pizzaAmount) {
