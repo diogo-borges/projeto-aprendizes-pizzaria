@@ -39,6 +39,7 @@
 .algoritmo-address {
   width: 15%;
   align-items: center;
+  color: #dd7d0f;
 }
 
 .contacts {
@@ -53,6 +54,7 @@
 .telephone, .email {
   margin: 0;
   padding: 0;
+  color: #dd7d0f;
 }
 
 .slogan{

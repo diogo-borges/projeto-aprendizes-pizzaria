@@ -12,10 +12,14 @@ body {
   font-size: 50px;
 }
 
+.dev-pleno-title-bars, .dev-pleno-title-bars, .dev-senior-title-bars, .specialist-title-bars {
+color: #be2e16;
+}
 .dev-junior-titles, .dev-pleno-titles, .dev-senior-titles, .dev-specialist-titles{
   display: flex;
   flex-direction: row;
   margin-left: 15px;
+  color: #dd7d0f;
 }
 
 .div-sale-title {

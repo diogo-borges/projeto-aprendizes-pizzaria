@@ -1,3 +1,5 @@
+import pizzas from "../../../utils/pizzas.js";
+
 const header = function () {
     document.body.innerHTML = `
     <header id="header">
@@ -42,3 +44,18 @@ function exitAndClean() {
     sessionStorage.clear();
     location.href = "../LoginPage/LoginPage.html";
 }
+
+// Seach Bar
+    const barBtn = document.querySelector(".search-btn")
+    const barInput = document.querySelector('.search-bar-input')
+    barBtn.addEventListener('click', searchBar)
+    function searchBar(){
+        const barInputValue = barInput.value
+        const pizzaFilter = pizzas.filter(pizza => {
+            return pizza.name.toLowerCase().match(barInputValue.toLowerCase())
+        });
+    console.log(pizzaFilter);
+    pizzaResults(pizzaFilter);
+    } searchBar()
+
+
