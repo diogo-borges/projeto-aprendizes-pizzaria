@@ -83,10 +83,11 @@
 
 [name]::after {
 	position: absolute;
-	width: 94%;
-	height: 235px;
+	height: 130px;
 	padding: 8px;
 	display: flex;
+	font-size: 18px;
+    align-items: center;
 	text-align: center;
 	justify-content: center;
 	content: attr(name);

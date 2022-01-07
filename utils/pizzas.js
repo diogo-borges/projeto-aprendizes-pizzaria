@@ -64,7 +64,7 @@ export default [
 		"name": "Kotlin" ,
 		"category": "Dev Pleno",
 		"price": "35,00" ,
-		"description": "Presunto, muçarela, ovos cozidos, ervilha, rocelas de cebola e azeitona",
+		"description": "Presunto, muçarela, ovos cozidos, ervilha, rodelas de cebola e azeitona",
 		"is_sale": false,
 		"image":"../../assets/img/MainPage_flavours/Salty/kotlin.png" 
 	},
@@ -101,7 +101,7 @@ export default [
 	
 	{
 		"id": 10,
-		"name": "C++" ,
+		"name": "C#" ,
 		"category": "Dev Sênior",
 		"price": "40,00" ,
 		"description": "Muçarela, provolone, gorgonzola e parmesão",
