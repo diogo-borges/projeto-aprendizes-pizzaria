@@ -3,11 +3,11 @@ function footer(query) {
 	${query.innerHTML}
     <footer id="footer-main">
   <section class="footer-address-contacts">
-    <p class="algoritmo-address" style="color: #dd7d0f;">Rua Amarelinha, nº123
+    <p class="algoritmo-address">Rua Amarelinha, nº123
       - Little Yellow - SP</p>
       <div class="contacts">
-        <p class="telephone" style="color: #dd7d0f;">(11) 95248-4545</p>
-        <p class="email" style="color: #dd7d0f;">contato@algoritmo.com.br</p>
+        <p class="telephone">(11) 95248-4545</p>
+        <p class="email">contato@algoritmo.com.br</p>
       </div>
     <img class="slogan" src="../../assets/img/slogan.png">
   </section>

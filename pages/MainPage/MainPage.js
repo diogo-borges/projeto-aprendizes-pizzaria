@@ -2,8 +2,7 @@ import Carousel from "../../assets/components/Carousel/carousel.js";
 import pizzas from "../../utils/pizzas.js";
 import footer from "../../assets/components/Footer/footer.js";
 import pizzaCards from "../../assets/components/PizzaCards/cards.js";
-import cartItem from "../../models/cartItem.model.js";
-import cartItemsHelper from "../../helpers/cart-item.helper.js"
+import getIdAndAmount from "../../utils/getIdAndAmount.util.js";
 
 // On sale carousel
 const pizzaSale = pizzas.filter(pizza => pizza.is_sale === true)
@@ -35,11 +34,3 @@ const pizzaDevSpecialist = pizzas.filter(pizza => pizza.category === "Especialis
 const pizzaComponentSPECIALIST = document.querySelector("#specialist-card")
 pizzaCards(pizzaDevSpecialist, pizzaComponentSPECIALIST, getIdAndAmount);
 
-
-// Cart item
-
-function getIdAndAmount(id) {
-    const pizzaAmount = document.querySelector(`#pizza-amount-${id}`)
-    const cartitem = new cartItem(id, pizzaAmount.value)
-    cartItemsHelper().createItem(cartitem);
-}

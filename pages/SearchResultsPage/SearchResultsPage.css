@@ -1,0 +1,49 @@
+@import url('../../index.css');
+
+body {
+	font-family: 'M PLUS 1 Code', sans-serif;
+	font-weight: 500;
+}
+
+#result-card-search {
+	display: flex;
+	flex-direction: column;
+	font-size: 50px;
+	align-items: center;
+	width: 100%;
+}
+
+.result-titles {
+	display: flex;
+	flex-direction: row;
+	color: #dd7d0f;
+	height: 146px;
+}
+
+.result-title-bars {
+	color: #be2e16;
+}
+
+#footer-main {
+	justify-content: flex-end;
+	min-height: 294px;
+}
+
+.card-result{
+  display: flex;
+  margin-left: 150px;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+}
+
+.not-found-pizza, .found-pizza{
+	font-size: 30px;
+	color: #dd7d0f;
+	display: flex ;
+	margin-top: 0;
+}
+
+.hidden{
+	display: none;
+}

@@ -1,5 +1,7 @@
+import pizzas from "../../../utils/pizzas.js";
+
 const header = function () {
-    document.body.innerHTML = `
+  document.body.innerHTML = `
     <header id="header">
     <section class="header-logo">
         <a href="../MainPage/MainPage.html"> <img class="algoritmo-logo"
@@ -32,13 +34,24 @@ const profileRedirect = document.getElementById('menu-item-profile');
 profileRedirect.addEventListener('click', myProfileRedirect);
 
 function myProfileRedirect() {
-    location.href = "../UserProfilePage/UserProfilePage.html";
+  location.href = "../UserProfilePage/UserProfilePage.html";
 }
 
 const exit = document.getElementById('menu-item-exit');
 exit.addEventListener('click', exitAndClean);
 
 function exitAndClean() {
-    sessionStorage.clear();
-    location.href = "../LoginPage/LoginPage.html";
+  sessionStorage.clear();
+  location.href = "../LoginPage/LoginPage.html";
+}
+
+// Search Bar
+const barBtn = document.querySelector(".search-btn")
+const barInput = document.querySelector('.search-bar-input')
+barBtn.addEventListener('click', searchBar)
+function searchBar() {
+  const barInputValue = barInput.value.trim()
+  if (barInputValue === '') return alert('Você precisa buscar algo.')
+  const queryString  = location.search = '?search=' + barInputValue
+  location.href = '../SearchResultsPage/SearchResultsPage.html' + queryString
 }
