@@ -132,6 +132,8 @@ function createNewOrder() {
 		setTimeout(function () {
 			successBar.classList.add('hidden')
 		}, 1700)
-		removeAllCartItems();
+		setTimeout(function () {
+			removeAllCartItems();
+		}, 2000)
 	}
 }
