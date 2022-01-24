@@ -52,6 +52,13 @@ function shoppingCartRedirect(){
   location.href = "../ShoppingCartPage/ShoppingCartPage.html";
 }
 
+const ordersRedirect = document.getElementById('menu-item-orders')
+ordersRedirect.addEventListener('click', myOrdersRedirect)
+
+function myOrdersRedirect(){
+  location.href = "../OrdersPage/OrdersPage.html";
+}
+
 // Search Bar
 const barBtn = document.querySelector(".search-btn")
 const barInput = document.querySelector('.search-bar-input')
