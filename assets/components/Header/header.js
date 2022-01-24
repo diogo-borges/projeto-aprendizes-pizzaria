@@ -45,6 +45,13 @@ function exitAndClean() {
   location.href = "../LoginPage/LoginPage.html";
 }
 
+const cartRedirect = document.getElementById('menu-item-car')
+cartRedirect.addEventListener('click', shoppingCartRedirect)
+
+function shoppingCartRedirect(){
+  location.href = "../ShoppingCartPage/ShoppingCartPage.html";
+}
+
 // Search Bar
 const barBtn = document.querySelector(".search-btn")
 const barInput = document.querySelector('.search-bar-input')
