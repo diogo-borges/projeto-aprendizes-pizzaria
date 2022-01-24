@@ -1,0 +1,52 @@
+@import url('../../index.css');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@400;500&display=swap');
+
+* {
+  font-family: 'M PLUS 1 Code', sans-serif;
+  font-weight: 500;
+}
+
+.div-orders-title {
+  display: flex;
+  justify-content: center;
+  font-size: 62px;
+  font-weight: bold;
+  color: #dd7d0f;
+}
+
+.orders-title-lesser-sign, .orders-title-greater-sign {
+  color: #be2e16;
+}
+
+.no-orders-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a0c8f0c9;
+  width: 374px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.no-orders-phrase {
+  color: white;
+  font-size: 40px;
+  text-align: center;
+}
+
+.div-my-orders{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#footer-main {
+  justify-content: flex-end;
+  min-height: 400px;
+  height: auto;
+}
+
+.hidden{
+  display: none;
+}

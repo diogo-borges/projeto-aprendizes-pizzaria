@@ -1,0 +1,125 @@
+details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+summary, .order-description {
+  width: 700px;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+summary {
+  display: flex;
+  justify-content: space-between;
+  background-color: #83B9EF;
+  list-style: none;
+  font-size: 14pt;
+}
+
+.order-description {
+  background-color: #A0C8F0;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  text-align: center;
+  font-size: 13pt;
+}
+
+.pizza-order-amount {
+  color: #BE2e16;
+  background-color: rgba(255, 255, 255, 0.596);
+  padding: 2px;
+}
+
+.pizza-order-name {
+  color: white;
+}
+
+.order-informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.order-price-and-amount {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.order-total-amount, .order-total-price {
+  margin: 0;
+}
+
+.cancel-order, .order-delivered, .order-again {
+  outline: none;
+  border: none;
+  width: 130px;
+  height: 30px;
+  color: white;
+  cursor: pointer;
+  font-size: 11pt;
+  border-radius: 4px;
+}
+
+.cancel-order {
+  background-color: #BE2e16;
+}
+
+.order-delivered, .order-again {
+  background-color: #038C33;
+}
+
+.repeat-order-modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 260px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.151);
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  background-color: #83B9EF;
+  margin: auto;
+  padding: 20px;
+  width: 800px;
+  border-radius: 30px;
+  font-size: 13pt;
+}
+
+.repeat-order-description {
+  display: flex;
+  flex-direction: column;
+}
+
+.repeat-order-informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.modal-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.close-modal {
+  font-size: 22pt;
+  cursor: pointer;
+}
